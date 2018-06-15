@@ -1,0 +1,12 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <h1>{{title}}</h1>
+  <p>List Database:  {{ db }}</p>
+    <p>Collection: {{ collection }}</p>
+    <ul>
+      {%  for doc in list %}
+        <li>{{ doc.smartphone }}: {{ doc.price }}</li>
+      {% endfor %}
+    </ul>
+{% endblock %}
